@@ -1,10 +1,10 @@
+//LEETCODE PREMIUM
+
 #include <bits/stdc++.h>
 using namespace std;
 
-int main(){
-    int n, sum{0}, ld, temp;
-    cout<< "Enter the number:";
-    cin>>n;
+bool armstrong(int n){
+    int sum{0}, ld, temp;
     temp = n;
     while(n>0){
         ld = n % 10;
@@ -12,9 +12,18 @@ int main(){
         n = n/10;
     }
     if(sum == temp){
-        cout<<"true";
+        cout<<boolalpha;
+        return true;
     }
     else{
-        cout<<"false";
+        cout<<boolalpha;
+        return false;
     }
+}
+
+int main(){
+    int n;
+    cout<< "Enter the number:";
+    cin>>n;
+    cout<<armstrong(n);
 }
