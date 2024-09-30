@@ -1,11 +1,10 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int main(){
-    int n, ld, revNum{0};
-    cout<<"Enter the number:";
-    cin>>n;
+bool isPalindrome(int n){
+    int ld, revNum{0};
     int temp;
+    
     temp = n;
     while(n>0){
         ld = n % 10;
@@ -13,9 +12,21 @@ int main(){
         n = n/10;
     }
     if(temp == revNum){
-        cout<<"true";
+        cout<<boolalpha;
+        return true;
     }
     else{
-        cout<<"false";
+        cout<<boolalpha;
+        return false;
     }
+   
+    
+}
+
+int main(){
+    int n;
+    cout<<"Enter the number:";
+    cin>>n;
+    cout<<isPalindrome(n);
+    
 }
